@@ -10,25 +10,13 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/skr003/Cloud-Script-Generator.git'  // Replace with your repo URL
+                    checkout
             }
         }
-
-        stage('Build Project') {
+        
+        stage('Build and Package Application') {
             steps {
-                sh '${MVN_HOME} clean compile'
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                sh '${MVN_HOME} test'
-            }
-        }
-
-        stage('Package Application') {
-            steps {
-                sh '${MVN_HOME} package -DskipTests'
+                sh 'mvn clean package -DskipTests'
             }
         }
 
