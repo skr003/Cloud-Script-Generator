@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                  sh 'pwd'
-                 sh 'git clone -b https://github.com/skr003/Cloud-Script-Generator.git .'
+                 sh 'git pull origin main'
             }
         }
         
