@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git checkout
+                 sh 'git clone -b https://github.com/skr003/Cloud-Script-Generator.git .
             }
         }
         
