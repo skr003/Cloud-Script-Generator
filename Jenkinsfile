@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-repo/java-maven-project.git'  // Replace with your repo URL
+                git 'https://github.com/skr003/Cloud-Script-Generator.git'  // Replace with your repo URL
             }
         }
 
