@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Script Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Cloud Script Generator</h2>
+    <form id="scriptForm">
+        <label>Cloud Provider:</label>
+        <select id="cloud">
+            <option value="aws">AWS</option>
+            <option value="azure">Azure</option>
+        </select>
+
+        <label>Resource Type:</label>
+        <select id="resourceType">
+            <option value="instance">EC2 Instance</option>
+            <option value="vm">Virtual Machine</option>
+        </select>
+
+        <label>Format:</label>
+        <select id="format">
+            <option value="tf">Terraform</option>
+            <option value="sh">Bash</option>
+        </select>
+
+        <label>Parameters (key=value):</label>
+        <textarea id="params"></textarea>
+
+        <button type="submit">Generate Script</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
